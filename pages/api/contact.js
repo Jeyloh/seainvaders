@@ -19,19 +19,22 @@ export default function handler(req, res) {
   const data = JSON.parse(req.body);
 
   const html = `
-    ${getLine('Email', data.email)}
-    ${getLine('Request', data.body)}
+    ${getLine('Navn', data.name)}
+    ${getLine('Epost', data.email)}
+    ${getLine('Forespørsel', data.body)}
+    <br/>
+    <p>En kopi er sendt til Sea Invaders, og ${data.name}</p>
   `;
 
-  const to = ['dev@coolart.no'];
+  const to = ['contact@coolart.no', 'dev@coolart.no'];
   if (data.email) {
     to.push(data.email);
   }
   const mailOptions = {
-    from: 'SeaInvaders <dev@coolart.no>', // sender address
+    from: 'Sea Invaders <contact@coolart.no>', // sender address
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
-    subject: 'Sea Invaders request', // Subject line
+    subject: 'Sea Invaders forespørsel fra ' + data.name, // Subject line
     html, // email body
     ses: {
       // optional extra arguments for SendRawEmail

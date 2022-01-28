@@ -5,6 +5,7 @@ import aws from 'aws-sdk';
 const config = {
   dataset: process.env.SANITY_STUDIO_API_DATASET,
   projectId: process.env.SANITY_STUDIO_API_PROJECT_ID,
+  apiVersion: 'v1',
   useCdn: process.env.NODE_ENV === 'production',
   token: process.env.SANITY_API_TOKEN,
 };
@@ -51,12 +52,13 @@ async function warnDevAboutComment(name, email, comment) {
     from: 'SeaInvaders <dev@coolart.no>', // sender address
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
-    subject: 'Ny post på Sea Invaders', // Subject line
-    text: `Bruker ved navn ${name} og epost: ${email} har skrevet denne kommentaren:
-
-    ${comment}
-
-    Kontroller og publiser i Sanity
+    subject: 'Verifiser post på Sea Invaders', // Subject line
+    html: `
+    <h1>Sea Invaders blir brukt!</h1>
+    <p>Bruker ved navn <b>${name}</b> og epost: <b>${email}</b> har skrevet denne kommentaren:</p>
+    <p>${comment}</p>
+    <br/>
+    <a href='https://seainvaders.sanity.studio/'>Verifiser og publiser i Sanity</a>
     `, // email body
     ses: {
       // optional extra arguments for SendRawEmail

@@ -6,7 +6,7 @@
   "api": {
     "projectId": "u274cnio",
     "dataset": "production",
-    "apiVersion": "1"
+    "apiVersion": "v1"
   },
   "plugins": [
     "@sanity/base",
