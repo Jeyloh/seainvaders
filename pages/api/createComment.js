@@ -47,9 +47,9 @@ aws.config.update({
 
 async function warnDevAboutComment(name, email, comment) {
   const to = ['dev@coolart.no'];
-
+  console.log('Advarer utvikler om endring');
   const mailOptions = {
-    from: 'SeaInvaders <dev@coolart.no>', // sender address
+    from: 'Sea Invaders <contact@coolart.no>', // sender address
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
     subject: 'Verifiser post på Sea Invaders', // Subject line
