@@ -51,14 +51,17 @@
 
   --borderRadius: 0.2em;
 
+  --mobileMenuButtonWidth: 30px;
+  --mobileMenuButtonHeight: calc(var(--mobileMenuButtonWidth) * 0.75);
+
   --font-body: 'Open Sans', sans-serif;
   --font-header: 'Covered By Your Grace', cursive;
 }
 
 @media only screen and (max-width: 680px) {
   :root {
-    --smallPadding: var(--spacing2) var(--spacing1);
-    --largePadding: var(--spacing4) var(--spacing1);
+    --smallPadding: var(--spacing2) var(--spacing2);
+    --largePadding: var(--spacing4) var(--spacing2);
   }
 }
 

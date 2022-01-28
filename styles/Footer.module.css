@@ -17,9 +17,9 @@
   justify-content: space-between;
   width: 100%;
   display: flex;
-  max-width: var(--max-page-width);
   padding: var(--spacing2);
   margin: 0 auto;
+  gap: var(--spacing4);
 }
 
 @media only screen and (max-width: 680px) {
@@ -29,7 +29,6 @@
 }
 
 .Content {
-  width: var(--max-page-width);
 }
 .FooterLinks {
   display: flex;

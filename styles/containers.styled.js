@@ -37,12 +37,7 @@ export const StyledContainer = styled.div`
       ? 'var(--gradientBlue)'
       : ''};
 
-  ${
-    '' /* color: ${(props) => (props.blue ? 'white' : props.lightBlue ? 'black' : '')}; */
-  }
-
   padding: ${(props) => (props.padding ? 'var(--largePadding)' : 0)};
-
   margin: ${(props) => (props.margin ? '15vh' : 0)};
 `;
 
@@ -52,6 +47,10 @@ export const ThreeRowsContainer = styled.div`
   justify-content: space-between;
   gap: var(--spacing3);
   margin: var(--spacing5) 0;
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: column;
+  }
 `;
 
 export const RowItem = styled.div`
@@ -73,6 +72,11 @@ export const RowItem = styled.div`
     max-width: 100px;
     min-width: 100px;
   }
+  @media only screen and (max-width: 680px) {
+    p {
+      text-align: center;
+    }
+  }
 `;
 
 export const FlexContainer = styled.div`
@@ -81,6 +85,7 @@ export const FlexContainer = styled.div`
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : 'flex-start'};
   gap: ${(props) => (props.gap || 0) + 'px'};
+  flex-direction: ${(props) => (props.column ? 'column' : 'row')};
 
   ${(props) =>
     props.shouldWrap &&
@@ -91,4 +96,10 @@ export const FlexContainer = styled.div`
         width: 20%;
       }
     `}
+
+  @media only screen and (max-width: 680px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;

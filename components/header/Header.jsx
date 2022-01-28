@@ -10,10 +10,22 @@ import {
   HeaderWrapper,
   Navigation,
   NavItem,
-  HeaderPositionalWrapper,
+  MobileHamburgerButton,
+  MobileNavigation,
 } from './header.styled';
+import { useWindowSize } from '../../hooks/useMobileSize';
 
 export default function Header({ currentHref }) {
+  const size = useWindowSize();
+
+  return size.width > 768 ? (
+    <WebHeader currentHref={currentHref} />
+  ) : (
+    <MobileHeader currentHref={currentHref} />
+  );
+}
+
+const WebHeader = ({ currentHref }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [hasScrolledFurther, setHasScrolledFurther] = useState(false);
   useEffect(() => {
@@ -43,39 +55,79 @@ export default function Header({ currentHref }) {
     };
   }, [setHasScrolled, hasScrolled, setHasScrolledFurther, hasScrolledFurther]);
   return (
-    <>
-      <StyledHeader
+    <StyledHeader
+      hasScrolled={hasScrolled}
+      hasScrolledFurther={hasScrolledFurther}
+    >
+      <HeaderWrapper
         hasScrolled={hasScrolled}
         hasScrolledFurther={hasScrolledFurther}
       >
-        <HeaderWrapper
-          hasScrolled={hasScrolled}
-          hasScrolledFurther={hasScrolledFurther}
-        >
-          <FlexContainer alignItems>
-            <HeaderIcon hasScrolled={hasScrolled}>
-              <Image
-                width={200}
-                height={200}
-                objectFit={'contain'}
-                src={'/images/assets/logo.png'}
-                alt='coolart logo'
-              />
-            </HeaderIcon>
-            <HeaderContent>
-              <h1>{content.header.title}</h1>
-              <h2>{content.header.subtitle}</h2>
-            </HeaderContent>
-          </FlexContainer>
-          <Navigation>
-            {content.header.nav.map(({ text, href }) => (
-              <NavItem isCurrent={currentHref === href} key={text}>
-                <Link href={href}>{text}</Link>
-              </NavItem>
-            ))}
-          </Navigation>
-        </HeaderWrapper>
-      </StyledHeader>
-    </>
+        <FlexContainer alignItems>
+          <HeaderIcon hasScrolled={hasScrolled}>
+            <Image
+              width={200}
+              height={200}
+              objectFit={'contain'}
+              src={'/images/assets/logo.png'}
+              alt='coolart logo'
+            />
+          </HeaderIcon>
+          <HeaderContent>
+            <h1>{content.header.title}</h1>
+            <h2>{content.header.subtitle}</h2>
+          </HeaderContent>
+        </FlexContainer>
+        <Navigation>
+          {content.header.nav.map(({ text, href }) => (
+            <NavItem isCurrent={currentHref === href} key={text}>
+              <Link href={href}>{text}</Link>
+            </NavItem>
+          ))}
+        </Navigation>
+      </HeaderWrapper>
+    </StyledHeader>
   );
-}
+};
+
+const MobileHeader = ({ currentHref }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <StyledHeader hasScrolled={false} hasScrolledFurther={false}>
+      <HeaderWrapper hasScrolled={false} hasScrolledFurther={false}>
+        <FlexContainer alignItems>
+          <HeaderIcon hasScrolled={false} hasScrolledFurther={false}>
+            <Image
+              width={200}
+              height={200}
+              objectFit={'contain'}
+              src={'/images/assets/logo.png'}
+              alt='coolart logo'
+            />
+          </HeaderIcon>
+          <HeaderContent>
+            <h1>{content.header.title}</h1>
+            <h2>{content.header.subtitle}</h2>
+          </HeaderContent>
+        </FlexContainer>
+        <MobileHamburgerButton menuOpen={menuOpen} onClick={handleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </MobileHamburgerButton>
+        <MobileNavigation menuOpen={menuOpen}>
+          {content.header.nav.map(({ text, href }) => (
+            <NavItem isCurrent={currentHref === href} key={text}>
+              <Link href={href}>{text}</Link>
+            </NavItem>
+          ))}
+        </MobileNavigation>
+      </HeaderWrapper>
+    </StyledHeader>
+  );
+};
