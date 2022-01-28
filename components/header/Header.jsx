@@ -63,7 +63,7 @@ const WebHeader = ({ currentHref }) => {
         hasScrolled={hasScrolled}
         hasScrolledFurther={hasScrolledFurther}
       >
-        <FlexContainer alignItems>
+        <FlexContainer alignItems={'center'}>
           <HeaderIcon hasScrolled={hasScrolled}>
             <Image
               width={200}
@@ -99,7 +99,7 @@ const MobileHeader = ({ currentHref }) => {
   return (
     <StyledHeader hasScrolled={false} hasScrolledFurther={false}>
       <HeaderWrapper hasScrolled={false} hasScrolledFurther={false}>
-        <FlexContainer alignItems>
+        <FlexContainer alignItems={'center'}>
           <HeaderIcon hasScrolled={false} hasScrolledFurther={false}>
             <Image
               width={200}

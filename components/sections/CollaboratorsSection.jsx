@@ -12,8 +12,9 @@ export default function CollaboratorsSection() {
       <h1>{content.partners.title}</h1>
 
       <FlexContainer
+        enableMediaAutoColumn
         gap={30}
-        alignItems
+        alignItems={'center'}
         justifyContent={'space-between'}
         shouldWrap
       >
