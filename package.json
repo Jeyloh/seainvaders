@@ -36,8 +36,7 @@
     "react-responsive-carousel": "^3.2.21",
     "styled-components": "^5.3.3",
     "swr": "^1.2.0",
-    "use-is-in-viewport": "^1.0.9",
-    "xoauth2": "^1.2.0"
+    "use-is-in-viewport": "^1.0.9"
   },
   "devDependencies": {
     "@sanity/cli": "^2.25.0",
