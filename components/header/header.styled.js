@@ -1,31 +1,52 @@
 import styled, { css } from 'styled-components';
 
+export const HeaderPositionalWrapper = styled.div`
+  padding-top: 522px;
+  transition: padding-top 500ms ease-in;
+  z-index: 15;
+
+  ${(props) =>
+    props.hasScrolled &&
+    css`
+      padding-top: 150px;
+    `}
+  ${(props) => props.hasScrolledFurther && css``}
+`;
+
 export const StyledHeader = styled.header`
   width: 100%;
-  z-index: 15;
   background-color: var(--darkTransparent);
+  transition: top 500ms ease-in;
+  top: 0;
+  z-index: 50;
 
   ${(props) => props.hasScrolled && css``}
+  ${(props) =>
+    props.hasScrolledFurther &&
+    css`
+      ${'' /* background-color: var(--blue); */}
+    `}
 `;
 export const HeaderWrapper = styled.div`
   padding: var(--spacing2);
-  height: 50vh;
+  max-width: var(--max-page-width);
+  height: 500px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  transition: height 300ms ease-in;
+  transition: height 500ms ease-in;
 
   ${(props) =>
     props.hasScrolled &&
     css`
-      height: 30vh;
+      height: 120px;
     `}
 `;
 
 export const HeaderIcon = styled.div`
-  transition: width 300ms ease-in-out;
+  transition: width 500ms ease-in;
   width: 200px;
 
   ${(props) =>

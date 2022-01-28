@@ -10,11 +10,13 @@ export const FullPageContainer = styled.div`
 `;
 
 export const SectionContainer = styled.div`
-  padding: var(--largePadding);
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: var(--smallPadding);
 `;
 
 export const StyledContainer = styled.div`
-  min-height: 60vh;
+  min-height: 40vh;
   background-color: ${(props) =>
     props.blue
       ? 'var(--blue)'
@@ -49,18 +51,21 @@ export const ThreeRowsContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing3);
-  margin: var(--spacing3) 0;
+  margin: var(--spacing5) 0;
 `;
 
 export const RowItem = styled.div`
   text-align: center;
-  min-height: 350px;
 
   p {
     text-align: left;
   }
   img {
-    border-radius: 50%;
+    ${(props) =>
+      !props.noImageRadius &&
+      css`
+        border-radius: 50%;
+      `};
     height: 100px;
     max-height: 100px;
     min-height: 100px;
@@ -73,6 +78,9 @@ export const RowItem = styled.div`
 export const FlexContainer = styled.div`
   display: flex;
   align-items: ${(props) => (props.alignItems ? 'center' : 'flex-start')};
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : 'flex-start'};
+  gap: ${(props) => (props.gap || 0) + 'px'};
 
   ${(props) =>
     props.shouldWrap &&

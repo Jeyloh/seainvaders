@@ -11,15 +11,23 @@ export default function CollaboratorsSection() {
     <SectionContainer>
       <h1>{content.partners.title}</h1>
 
-      <FlexContainer shouldWrap>
+      <FlexContainer
+        gap={30}
+        alignItems
+        justifyContent={'space-between'}
+        shouldWrap
+      >
         {content.partners.list.map((partnerItem) => (
-          <RowItem key={partnerItem.alt}>
+          <RowItem noImageRadius key={partnerItem.alt}>
             <Image
               src={partnerItem.url}
-              height={'100px'}
-              width={'100px'}
+              width={100}
+              height={100}
+              layout={'responsive'}
+              objectFit='contain'
               alt={partnerItem.alt}
             />
+            <p>{partnerItem.alt}</p>
           </RowItem>
         ))}
       </FlexContainer>

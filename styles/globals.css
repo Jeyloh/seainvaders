@@ -4,11 +4,11 @@
 @import 'react-image-gallery/styles/css/image-gallery.css';
 
 :root {
-  --lightBlue: #00bcd4;
+  --lightBlue: rgb(16, 208, 233);
   --blue: #2e86ab;
 
-  --gradientBlue: linear-gradient(var(--lightBlue), var(--blue));
-  --gradientBlueReverse: linear-gradient(var(--blue), var(--lightBlue));
+  --gradientBlue: linear-gradient(var(--lightBlue) 0, var(--blue) 100%);
+  --gradientBlueReverse: linear-gradient(var(--blue) 0, var(--lightBlue) 100%);
 
   --gradientPink: linear-gradient(135deg, #743e57, #c41e69),
     linear-gradient(180deg, #af4173, #af4173);
@@ -18,7 +18,7 @@
   --gray: #b4b4b4;
 
   --darkTransparent: rgba(0, 0, 0, 0.5);
-  --whiteTransparent: rgba(255, 255, 255, 0.5);
+  --whiteTransparent: rgba(255, 255, 255, 0.7);
 
   --spacing1: 0.5em;
   --spacing2: 1em;
@@ -59,6 +59,12 @@
   :root {
     --smallPadding: var(--spacing2) var(--spacing1);
     --largePadding: var(--spacing4) var(--spacing1);
+  }
+}
+
+@media only screen and (min-width: 1990px) {
+  :root {
+    --max-page-width: 1440px;
   }
 }
 
