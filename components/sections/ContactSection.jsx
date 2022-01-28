@@ -4,6 +4,8 @@ import { StyledContactSection, ContactForm } from './section.styled';
 import { useState, useRef } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { BiMailSend } from 'react-icons/bi';
+import Input from '../input';
+import Button from '../button';
 
 export default function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
@@ -25,6 +27,7 @@ export default function ContactSection() {
         .then((google_response) => {
           if (google_response.success == true) {
             resolve(true);
+            setIsDisabled(false);
           } else {
             resolve(false);
           }
@@ -40,7 +43,7 @@ export default function ContactSection() {
 
     if (grecaptcha.getResponse() === '') {
       e.preventDefault();
-      alert("Please click <I'm not a robot> before sending the job");
+      alert("Please click <I'm not a robot> before sending the message");
       return;
     }
 
@@ -96,31 +99,44 @@ export default function ContactSection() {
         <h3 className='font'>{content.contact.line3}</h3>
 
         <h2>{content.contact.email.title}</h2>
-        <ContactForm onSubmit={handleSubmit}>
-          <input
-            required
-            name={'email'}
-            type='email'
-            placeholder='Type your email'
-          />
-          <input name={'name'} type='text' placeholder='Type your name' />
-          <textarea
-            required
-            name={'body'}
-            rows={5}
-            placeholder='Your request ...'
-          />
-
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            size='normal'
-            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            onChange={validateCaptcha}
-          />
-          <button disabled={isDisabled} type='submit'>
-            {isLoading ? <BiMailSend /> : content.contact.email.cta}
-          </button>
-        </ContactForm>
+        {isDone ? (
+          <p>We have received the request :)</p>
+        ) : (
+          <ContactForm onSubmit={handleSubmit}>
+            <Input
+              required
+              name={'email'}
+              type='email'
+              label={'Email'}
+              placeholder='Type your email'
+            />
+            <Input
+              label={'Name'}
+              name={'name'}
+              type='text'
+              placeholder='Type your name'
+            />
+            <Input
+              required
+              type={'textarea'}
+              name={'body'}
+              label={'Message'}
+              rows={5}
+              placeholder='Your request ...'
+            />
+            <br />
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              size='normal'
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              onChange={validateCaptcha}
+            />
+            <Button
+              text={isLoading ? <BiMailSend /> : content.contact.email.cta}
+              type='submit'
+            />
+          </ContactForm>
+        )}
       </StyledContactSection>
     </SectionContainer>
   );

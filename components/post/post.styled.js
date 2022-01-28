@@ -9,6 +9,17 @@ export const PostContainer = styled.div`
 `;
 
 export const PostForm = styled.form`
+  display: block;
+`;
+
+export const PostDivider = styled.div`
   display: flex;
-  flex-direction: column;
+
+  > * {
+    width: 70%;
+  }
+  aside {
+    width: 30%;
+    margin-right: var(--spacing2);
+  }
 `;

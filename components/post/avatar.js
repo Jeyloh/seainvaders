@@ -1,18 +1,22 @@
 import Image from 'next/image';
+import { FlexContainer } from '../../styles/containers.styled';
 
-export default function Avatar({ name, picture }) {
+export default function Avatar({ name, picture, children }) {
   return (
-    <div className='flex items-center'>
+    <FlexContainer alignItems={'flex-end'} fullWidth gap={10}>
       {picture && (
         <Image
           height={50}
           width={50}
           src={picture}
-          className='w-12 h-12 rounded-full mr-4'
+          className='rounded'
           alt={name}
         />
       )}
-      <div className='text-xl font-bold'>{name}</div>
-    </div>
+      <FlexContainer column gap={10}>
+        <div>{name}</div>
+        {children && <div>{children}</div>}
+      </FlexContainer>
+    </FlexContainer>
   );
 }

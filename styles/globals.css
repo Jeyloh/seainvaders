@@ -159,19 +159,9 @@ a:hover {
   box-sizing: border-box;
 }
 
-.carousel-status {
-  display: none;
+.rounded {
+  border-radius: 50%;
 }
-/*
-body {
-  margin-top: -23px;
-  background-color: #00bfa5;
-  background-image: url(https://uploads-ssl.webflow.com/594ae99…/5a70ab3…_great-barreer-reef-from-above.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
-
 .Juicer h1 {
   display: none !important;
 }

@@ -7,11 +7,4 @@ export const StyledContactSection = styled.header`
   border: 2px solid white;
 `;
 
-export const ContactForm = styled.form`
-  display: flex;
-  flex-direction: column;
-
-  > * {
-    margin-bottom: var(--spacing2);
-  }
-`;
+export const ContactForm = styled.form``;

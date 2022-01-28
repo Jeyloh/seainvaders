@@ -80,14 +80,29 @@ export const RowItem = styled.div`
   }
 `;
 
+export const StyledCardContainer = styled.div`
+  ${'' /* border: 1px solid var(--blue); */}
+  transition: all 200ms ease-in;
+  &:hover {
+    * {
+      color: var(--blue);
+    }
+  }
+`;
+
 export const FlexContainer = styled.div`
   display: flex;
-  align-items: ${(props) => (props.alignItems ? 'center' : 'flex-start')};
+  align-items: ${(props) => props.alignItems || 'flex-start'};
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : 'flex-start'};
   gap: ${(props) => (props.gap || 0) + 'px'};
   flex-direction: ${(props) => (props.column ? 'column' : 'row')};
 
+  ${(props) =>
+    props.fullWidth &&
+    css`
+      width: 100%;
+    `};
   ${(props) =>
     props.shouldWrap &&
     css`
@@ -98,9 +113,13 @@ export const FlexContainer = styled.div`
       }
     `}
 
-  @media only screen and (max-width: 680px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+  ${(props) =>
+    props.enableMediaAutoColumn &&
+    css`
+      @media only screen and (max-width: 680px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    `}
 `;

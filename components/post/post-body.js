@@ -14,14 +14,12 @@ const serializers = {
 
 export default function PostBody({ content }) {
   return (
-    <PostPadding>
-      <BlockContent
-        serializers={serializers}
-        blocks={content}
-        projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-        dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
-        className={markdownStyles.markdown}
-      />
-    </PostPadding>
+    <BlockContent
+      serializers={serializers}
+      blocks={content}
+      projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+      dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+      className={markdownStyles.markdown}
+    />
   );
 }

@@ -13,10 +13,11 @@ const StyledButton = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: background-color 200ms ease-in;
+  transition: all 200ms ease-in;
   border: 1px solid var(--blue);
   background-color: var(--blue);
   margin: var(--spacing1) 0;
+  color: white;
   ${
     '' /* font-family: var(--font-header);
   font-size: var(--font-sm); */
@@ -24,5 +25,12 @@ const StyledButton = styled.button`
 
   &:hover {
     background-color: var(--lightBlue);
+    color: black;
+  }
+
+  &:disabled {
+    background-color: var(--gray);
+    border-color: var(--gray);
+    color: black;
   }
 `;

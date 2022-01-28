@@ -14,13 +14,16 @@ import {
   SectionContainer,
   StyledContainer,
 } from '../../styles/containers.styled';
-import { PostPadding } from '../../components/post/post.styled';
+import { PostDivider, PostPadding } from '../../components/post/post.styled';
+import Avatar from '../../components/post/avatar';
+import Date from '../../components/post/date';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  console.log({ post });
   return (
     <SiteWrapper>
       {router.isFallback ? (
@@ -29,25 +32,47 @@ export default function Post({ post, morePosts, preview }) {
         <StyledContainer white>
           <SectionContainer>
             <article>
-              <title>
-                {post.title} | Next.js Blog Example with {CMS_NAME}
-              </title>
+              <title>{post.title}</title>
               {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.body} />
+              <PostHeader title={post.title} coverImage={post.coverImage} />
+              <PostDivider>
+                <aside>
+                  <div className='max-w-2xl mx-auto'>
+                    <div className='block md:hidden mb-6'>
+                      <h4>Updated:</h4>
+
+                      <div className='mb-6 text-lg'>
+                        <Date dateString={post.date} />
+                      </div>
+                      <h4>About the author:</h4>
+
+                      <Avatar
+                        name={post.author?.name}
+                        picture={post.author?.picture}
+                      >
+                        {post.author?.bio && (
+                          <PostBody content={post.author.bio} />
+                        )}
+                      </Avatar>
+                    </div>
+                  </div>
+                </aside>
+                <PostBody content={post.body} />
+              </PostDivider>
             </article>
 
-            <PostPadding>
-              <Comments comments={post.comments} />
-              <Form _id={post._id} />
-              <SectionSeparator />
-              {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-            </PostPadding>
+            <PostDivider>
+              <aside></aside>
+              <div>
+                <SectionSeparator />
+
+                <Comments comments={post.comments} />
+
+                <Form _id={post._id} />
+              </div>
+            </PostDivider>
+
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
           </SectionContainer>
         </StyledContainer>
       )}
