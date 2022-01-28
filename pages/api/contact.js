@@ -28,7 +28,7 @@ export default function handler(req, res) {
     to.push(data.email);
   }
   const mailOptions = {
-    from: 'SeaInvaders <contact@coolart.no>', // sender address
+    from: 'SeaInvaders <dev@coolart.no>', // sender address
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
     subject: 'Sea Invaders request', // Subject line
