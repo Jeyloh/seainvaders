@@ -53,13 +53,10 @@ async function warnDevAboutComment(name, email, comment) {
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
     subject: 'Verifiser post på Sea Invaders', // Subject line
-    html: `
-    <h1>Sea Invaders blir brukt!</h1>
-    <p>Bruker ved navn <b>${name}</b> og epost: <b>${email}</b> har skrevet denne kommentaren:</p>
+    html: `<p>Bruker ved navn <b>${name}</b> og epost: <b>${email}</b> har skrevet denne kommentaren:</p>
     <p>${comment}</p>
     <br/>
-    <a href='https://seainvaders.sanity.studio/'>Verifiser og publiser i Sanity</a>
-    `, // email body
+    <a href='https://seainvaders.sanity.studio/'>Verifiser og publiser i Sanity</a>`, // email body
     ses: {
       // optional extra arguments for SendRawEmail
       Tags: [
