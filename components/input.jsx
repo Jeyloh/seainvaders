@@ -4,11 +4,11 @@ import { forwardRef } from 'react';
 const Input = forwardRef((props, ref) => {
   Input.displayName = 'Input';
 
-  const { label, name, placeholder, required, type } = props;
+  const { label, name, placeholder, required, type, warning } = props;
   if (type === 'textarea') {
     return (
       <InputLabel>
-        <span>{label}</span>
+        <span style={{ fontWeight: warning ? 600 : 400 }}>{label}</span>
         <textarea
           id={name}
           rows='8'
@@ -23,7 +23,7 @@ const Input = forwardRef((props, ref) => {
   }
   return (
     <InputLabel>
-      <span>{label}</span>
+      <span style={{ fontWeight: warning ? 600 : 400 }}>{label}</span>
       <input
         id={name}
         name={name}

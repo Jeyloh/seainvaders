@@ -13,7 +13,7 @@ const getLine = (label, value) =>
   `<p>${label}: <b>${value?.length ? value : '-'}</b></p>`;
 
 export default function handler(req, res) {
-  console.log('hi from api/workshops');
+  console.log('hi from api/contact');
   console.log(req, res);
 
   const data = JSON.parse(req.body);

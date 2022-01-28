@@ -15,11 +15,8 @@ export default function Gallery() {
 
   function removeExtraGalleryStuff() {
     if (elfsightRef.current) {
-      console.log(elfsightRef.current);
-
       const anchor = elfsightRef.current.querySelector('a.eapps-link');
       if (anchor) {
-        console.log(anchor);
         elfsightRef.current.removeChild(anchor);
       }
 

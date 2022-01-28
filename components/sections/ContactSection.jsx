@@ -10,6 +10,7 @@ import Button from '../button';
 export default function ContactSection() {
   const [isLoading, setIsLoading] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const [warningList, setWarningList] = useState([]);
   const recaptchaRef = useRef();
 
   const [isDisabled, setIsDisabled] = useState(true);
@@ -109,12 +110,14 @@ export default function ContactSection() {
               type='email'
               label={'Email'}
               placeholder='Type your email'
+              warning={warningList.includes('email')}
             />
             <Input
               label={'Name'}
               name={'name'}
               type='text'
               placeholder='Type your name'
+              warning={warningList.includes('name')}
             />
             <Input
               required
@@ -123,6 +126,7 @@ export default function ContactSection() {
               label={'Message'}
               rows={5}
               placeholder='Your request ...'
+              warning={warningList.includes('body')}
             />
             <br />
             <ReCAPTCHA

@@ -9,7 +9,6 @@ export default function ParallaxText({
   routePrefix,
   author,
 }) {
-  console.log(position);
   return (
     <div className={`text-position ${position}`}>
       <div>
