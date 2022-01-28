@@ -10,7 +10,7 @@ aws.config.update({
 });
 
 const getLine = (label, value) =>
-  `<p>${label}: <b>${value.length ? value : '-'}</b></p>`;
+  `<p>${label}: <b>${value?.length ? value : '-'}</b></p>`;
 
 export default function handler(req, res) {
   console.log('hi from api/workshops');

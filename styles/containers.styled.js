@@ -75,7 +75,7 @@ export const FlexContainer = styled.div`
   align-items: ${(props) => (props.alignItems ? 'center' : 'flex-start')};
 
   ${(props) =>
-    props.wrap &&
+    props.shouldWrap &&
     css`
       flex-wrap: wrap;
 

@@ -4,7 +4,6 @@ import {
   FlexContainer,
   RowItem,
   SectionContainer,
-  ThreeRowsContainer,
 } from '../../styles/containers.styled';
 
 export default function CollaboratorsSection() {
@@ -12,7 +11,7 @@ export default function CollaboratorsSection() {
     <SectionContainer>
       <h1>{content.partners.title}</h1>
 
-      <FlexContainer wrap>
+      <FlexContainer shouldWrap>
         {content.partners.list.map((partnerItem) => (
           <RowItem key={partnerItem.alt}>
             <Image
