@@ -16,3 +16,13 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown img {
+  max-width: 100%;
+  width: 400px;
+}
+
+.markdown figure {
+  margin-left: 0;
+  margin-right: 0;
+}

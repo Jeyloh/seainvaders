@@ -93,6 +93,7 @@ export default function ContactSection() {
 
         <h3 className='font'>{content.contact.line1}</h3>
         <h3 className='font'>{content.contact.line2}</h3>
+        <h3 className='font'>{content.contact.line3}</h3>
 
         <h2>{content.contact.email.title}</h2>
         <ContactForm onSubmit={handleSubmit}>

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Button from '../button';
+import Input from '../input';
+import { PostForm } from './post.styled';
 
 export default function Form({ _id }) {
   const [formData, setFormData] = useState();
@@ -43,47 +46,38 @@ export default function Form({ _id }) {
   }
 
   return (
-    <form
+    <PostForm
       onSubmit={handleSubmit(onSubmit)}
       className='w-full max-w-lg'
       disabled
     >
       <input ref={register} type='hidden' name='_id' value={_id} />
-      <label className='block mb-5'>
-        <span className='text-gray-700'>Name</span>
-        <input
-          name='name'
-          ref={register({ required: true })}
-          className='shadow border rounded py-2 px-3 form-input mt-1 block w-full'
-          placeholder='John Appleseed'
-        />
-      </label>
-      <label className='block mb-5'>
-        <span className='text-gray-700'>Email</span>
-        <input
-          name='email'
-          type='email'
-          ref={register({ required: true })}
-          className='shadow border rounded py-2 px-3 form-input mt-1 block w-full'
-          placeholder='your@email.com'
-        />
-      </label>
-      <label className='block mb-5'>
-        <span className='text-gray-700'>Comment</span>
-        <textarea
-          ref={register({ required: true })}
-          name='comment'
-          className='shadow border rounded py-2 px-3  form-textarea mt-1 block w-full'
-          rows='8'
-          placeholder='Enter some long form content.'
-        ></textarea>
-      </label>
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-      <input
-        type='submit'
-        className='shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
+      <Input
+        name={'name'}
+        ref={register({ required: true })}
+        placeholder={'Type your name'}
+        label={'Name'}
+        required={true}
       />
-    </form>
+      <Input
+        name={'email'}
+        ref={register({ required: true })}
+        placeholder={'your@email.com'}
+        label={'Email'}
+        required={true}
+        type={'email'}
+      />
+      <Input
+        name={'comment'}
+        ref={register({ required: true })}
+        placeholder={'Write your comment to the article'}
+        label={'Comment'}
+        required={true}
+        type={'textarea'}
+      />
+
+      {errors.exampleRequired && <span>This field is required</span>}
+      <Button type='submit' text={'Submit'} />
+    </PostForm>
   );
 }

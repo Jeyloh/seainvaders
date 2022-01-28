@@ -17,6 +17,7 @@ export const SectionContainer = styled.div`
 
 export const StyledContainer = styled.div`
   min-height: 40vh;
+
   background-color: ${(props) =>
     props.blue
       ? 'var(--blue)'

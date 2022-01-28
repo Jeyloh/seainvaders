@@ -67,10 +67,20 @@ export const StyledParallax = styled.div`
       }
 
       .text-position {
+        background: var(--darkTransparent);
+        padding: var(--spacing1);
         overflow-y: auto;
         text-align: center;
         width: 50%;
         z-index: 20;
+
+        @media only screen and (max-width: 680px) {
+          width: 100%;
+
+          h1 {
+            font-size: var(--font-lg);
+          }
+        }
       }
       .center {
         margin: 0 auto;

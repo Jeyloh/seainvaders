@@ -6,7 +6,7 @@
 :root {
   --lightBlue: rgb(16, 208, 233);
   --blue: #2e86ab;
-
+  --pink: #f96f9b;
   --gradientBlue: linear-gradient(var(--lightBlue) 0, var(--blue) 100%);
   --gradientBlueReverse: linear-gradient(var(--blue) 0, var(--lightBlue) 100%);
 

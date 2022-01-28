@@ -26,8 +26,8 @@ export default function Post({ post, morePosts, preview }) {
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
-        <SectionContainer>
-          <StyledContainer white>
+        <StyledContainer white>
+          <SectionContainer>
             <article>
               <title>
                 {post.title} | Next.js Blog Example with {CMS_NAME}
@@ -48,8 +48,8 @@ export default function Post({ post, morePosts, preview }) {
               <SectionSeparator />
               {morePosts.length > 0 && <MoreStories posts={morePosts} />}
             </PostPadding>
-          </StyledContainer>
-        </SectionContainer>
+          </SectionContainer>
+        </StyledContainer>
       )}
     </SiteWrapper>
   );
