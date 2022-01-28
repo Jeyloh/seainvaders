@@ -1,0 +1,48 @@
+.Container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing2);
+}
+
+@media only screen and (max-width: 680px) {
+  .Container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.LabelContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Warning {
+  color: var(--lightBlue);
+  font-weight: 600;
+}
+.LabelContainer input,
+.LabelContainer select,
+.LabelContainer textarea {
+  width: 100%;
+  margin-top: var(--spacing1);
+}
+
+.LabelContainer:last-child {
+  grid-column: span 2;
+}
+
+.SubmitButton {
+  margin-top: var(--spacing3);
+  background: var(--lightBlue);
+  color: white;
+  min-width: 200px;
+}
+
+.DoneBox {
+  border: 2px solid var(--lightBlue);
+  color: var(--lightBlue);
+  font-family: var(--exo);
+  padding: var(--smallPadding);
+  border-radius: 5px;
+}

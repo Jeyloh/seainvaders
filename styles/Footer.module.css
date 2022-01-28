@@ -1,0 +1,47 @@
+.Footer {
+  width: 100%;
+  background-color: var(--dark);
+  padding: var(--spacing3) 0;
+}
+
+.Footer * {
+  color: white;
+}
+
+.Footer h2,
+.Footer p {
+  margin-bottom: 0;
+}
+
+.Wrapper {
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  max-width: var(--max-page-width);
+  padding: var(--spacing2);
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 680px) {
+  .Wrapper {
+    flex-direction: column;
+  }
+}
+
+.Content {
+  width: var(--max-page-width);
+}
+.FooterLinks {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid white;
+  padding-left: var(--spacing2);
+  width: calc(var(--mainWidth));
+}
+
+.FooterLinks li {
+  margin: var(--spacing1) 0;
+}
+.FooterLinks li a {
+  font-size: var(--font-md);
+}

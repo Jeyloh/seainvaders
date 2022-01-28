@@ -1,0 +1,135 @@
+{
+  "articles": {
+    "title": {},
+    "items": [
+      {
+        "title": "CoolArt og Sea Invaders",
+        "body": "Kunstopplevelser kan være forgjengelige og kan ikke alltid fryses fast i enevig opplevelse, det er noe av verdien. Mange gledet og frydet seg over å severket vokse frem, over å snakke med kunstnerne som jobbet, og over å betrakteden ferdige fargesprakende Kunstkanalen. Den satte virkelig farge på byen, den skapte samtaler og diskusjon. Det handlet ikke om å være for eller motkanaler, det handlet om å skape en opplevelse som alle kunne ta del i på sineegne premisser, midt i byen. Diskusjonen om kanaler er interessant å følge, menenda mer interessant er det å oppleve hvordan noen liter maling på bakken harskapt så voldsomt mange meninger og følelser. Det er kunstens kraft - og utensterke meninger og følelser blir vi et fattig samfunn. Takk til CoolArt for en fantastisk kunstnerisk idé og gjennomføringsevne, og til Kanalselskapet, Arendal by og Arendal byselskap for modig samarbeid! Og takk til Agderposten for å ha bidratt til å skape KUNSTDEBATT 🙂Kunstverket er med å skape postive bølger for kunst i byen og for kunst tilfolk flest :)‍"
+      }
+    ]
+  },
+  "header": {
+    "title": "Sea Invaders",
+    "subtitle": "Using art to spread the dangers of ocean pollution",
+    "nav": [
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Gallery",
+        "href": "/gallery"
+      },
+      {
+        "text": "Articles",
+        "href": "/posts"
+      },
+      {
+        "text": "Videos",
+        "href": "/videos"
+      }
+    ]
+  },
+  "videos": {
+    "title": "Videos",
+    "subtitle": "Some of our experiences caught on video",
+    "list": [
+      {
+        "url": "https://player.vimeo.com/video/253463375?referrer=http%3A%2F%2Fseainvaders.com%2F",
+        "alt": "Seainvaders",
+        "title": "Watch Sea Invaders' beautiful art exhibition for PWC's new offices in Kristiansand"
+      },
+      {
+        "url": "https://player.vimeo.com/video/245758359?referrer=http%3A%2F%2Fseainvaders.com%2F",
+        "alt": "TEDtalks",
+        "title": "Sedin Zunic talks about plastic pollution & Street Art"
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "body": "SEA INVADERS is a global movement. By using art as a tool, we want to reach into the hearts of children all over the world and make them aware of the dangers of polluting the ocean. SEA INVADERS goal is to put a global focus on pollution of the ocean. We are creating a trend to make children aware of this critical danger, and how urgent it is to take action! We want children to spread the word upwards in generations.",
+    "vision": {
+      "title": "Vision",
+      "text": "Our common vision is to stop pollution, redefine the recycling and upcycling system. We are starting a global movement that will make participants proud of a common environment responsibility."
+    },
+    "children": {
+      "title": "Children",
+      "text": "The main goal of SEA INVADERS is to reach the hearts and minds of our youngest citizens. The heroes of tomorrow need to be aware of what they might be facing."
+    },
+    "art": {
+      "title": "Art",
+      "text": "We're combining drawings, art and streetart with the power of a childs creative and artistic mind to increase awareness of pollution in the ocean."
+    }
+  },
+  "reflect": {
+    "title": "Did you think of this?",
+    "body": "The ocean is the planet’s most important ecosystem. Our oceans are the Earth’s life support system, providing 70% of the oxygen we breathe, a sixth of the animal protein people eat, medicines that keep us alive and healthy. At the same time overfishing, plastics and pollution threatens the health of our seas. Unfortunately, these critical issues are often complex and hard to understand for the average citizen. Through public art seainvaders has the opportunity to communicate and visual stories that engage the public and increase awareness.\nPublic Art Beautifies and Revitalizes Communities Our goal: Seainvaders' project is to bring the beauty and the plight of our oceans into streets and the world around us."
+  },
+  "workshops": {
+    "title": "Youth workshops",
+    "body": "Youth are the future of tomorrow, it is important to provide educational opportunities for those young. Seainvaders create youth-focused art workshops and beach clean-ups. Seainvaders create opportunities to better educate and inspire the next generation of ocean bodyguards."
+  },
+  "contact": {
+    "title": "Contact us!",
+    "body": "Contact us! If you want to form a partnership, help us with awareness, talk to us about an idea or anything at all, don't hesitate to contact us. Emails are read within hours and we strive to respond quickly.",
+    "line1": "Ane Skjaevestad  +47 400 090 93",
+    "line2": "Sedin Zunic  +47 458 358 29",
+    "email": {
+      "title": "Direct email",
+      "cta": "Send us the message"
+    }
+  },
+  "partners": {
+    "title": "Partners",
+    "list": [
+      {
+        "alt": "Alianza",
+        "url": "/images/assets/partners/alianza.png"
+      },
+      {
+        "alt": "Avfall Sør",
+        "url": "/images/assets/partners/avfallsor.png"
+      },
+      {
+        "alt": "Bellona",
+        "url": "/images/assets/partners/bellona.png"
+      },
+      {
+        "alt": "FN",
+        "url": "/images/assets/partners/fn.png"
+      },
+      {
+        "alt": "Grid",
+        "url": "/images/assets/partners/grid.png"
+      },
+      {
+        "alt": "Kristiansand kommune",
+        "url": "/images/assets/partners/krs.png"
+      },
+      {
+        "alt": "Returkraft",
+        "url": "/images/assets/partners/returkraft.png"
+      },
+      {
+        "alt": "Runde",
+        "url": "/images/assets/partners/runde.png"
+      },
+      {
+        "alt": "Take3",
+        "url": "/images/assets/partners/take3.png"
+      }
+    ]
+  },
+  "footer": {
+    "title": "SEA INVADERS",
+    "main": "Sea Invaders is a charity organization bound in Norway. We've set ambisious goals for ourself on the quest to spread awareness of pollution in the ocean. We are using the power of art to reach out to children and parents alike.",
+    "contact": {
+      "location": "Kristiansand, Norway",
+      "phone": "+47 400 090 94",
+      "email": "contact@coolart.no",
+      "facebookUrl": "https://www.facebook.com/seainvadersart/",
+      "instagramUrl": "https://www.instagram.com/seainvaders/?hl=nb"
+    }
+  }
+}

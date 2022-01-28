@@ -1,0 +1,50 @@
+{
+  "name": "seainvaders",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "build:web": "next build",
+    "start:web": "next start",
+    "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
+    "start:sanity": "cp .env ./studio/.env.development && cd studio && sanity start",
+    "postinstall": "lerna bootstrap",
+    "deploy:sanity": "cd studio && sanity deploy"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.48.0",
+    "@aws-sdk/credential-provider-node": "^3.48.0",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
+    "aws-sdk": "^2.1063.0",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
+    "next": "11.1.0",
+    "next-sanity": "^0.4.0",
+    "nodemailer": "^6.7.0",
+    "react": "17.0.2",
+    "react-datepicker": "^4.3.0",
+    "react-dom": "17.0.2",
+    "react-google-maps": "^9.4.5",
+    "react-google-recaptcha": "^2.1.0",
+    "react-hook-form": "^6.7.0",
+    "react-icons": "^4.3.1",
+    "react-image-gallery": "^1.2.7",
+    "react-responsive-carousel": "^3.2.21",
+    "styled-components": "^5.3.3",
+    "swr": "^1.2.0",
+    "use-is-in-viewport": "^1.0.9",
+    "xoauth2": "^1.2.0"
+  },
+  "devDependencies": {
+    "@sanity/cli": "^2.25.0",
+    "babel-plugin-styled-components": "^2.0.2",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0",
+    "lerna": "^4.0.0"
+  }
+}

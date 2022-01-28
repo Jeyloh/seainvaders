@@ -1,0 +1,147 @@
+.Wrapper {
+  max-width: var(--max-page-width);
+  padding: var(--containerPadding);
+  margin: 0 auto;
+}
+
+.Grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.ImageScrollWrapper {
+  background-image: url('../public/images/portfoliogallery/fergefjellet1.jpg');
+  background-position: 52% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.ImageScrollWrapper .ImageBackground {
+  margin: 0 auto;
+  max-width: var(--max-page-width);
+}
+
+.ImageScrollWrapper .TextContent {
+  background-image: var(--gradientPinkBlue);
+  text-align: center;
+}
+
+.ImageScrollItem {
+  padding: var(--containerPadding) 0;
+  color: white;
+}
+
+.ImageScrollItem:first-child {
+  padding-top: var(--spacing4);
+}
+.ImageScrollItem:last-child {
+  padding-bottom: var(--spacing4);
+}
+.ImageScrollItem {
+  text-shadow: 1px 1px 6px #25ccbf;
+  white-space: pre-line;
+}
+.ImageScrollItem .yoHeader {
+  font-size: var(--font-xxl);
+  font-family: 'Monoton';
+  margin-bottom: 0;
+  font-family: var(--font-body);
+  color: #f2edf1;
+  font-size: var(--font-xxl);
+  font-weight: 400;
+  text-shadow: 1px 1px 6px #25ccbf;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Reasons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var(--spacing3);
+}
+.RowContainer > div {
+  width: 50%;
+}
+.RowContainer {
+  display: flex;
+  width: 100%;
+}
+
+.card {
+  margin: 1rem;
+  padding: var(--smallPadding);
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 45%;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .SplitBox {
+    flex-direction: column;
+    margin-top: -10px;
+  }
+  .SplitBox > div {
+    width: 100%;
+  }
+  .SplitBoxAbsolute {
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+  }
+  .SplitBoxAbsolute > div:first-child {
+    text-align: center;
+    padding: var(--largePadding);
+  }
+  .SplitBoxAbsolute > div:last-child {
+    text-align: center;
+    padding: var(--largePadding);
+  }
+
+  .SplitBoxFirst,
+  .SplitBoxSecond,
+  .SplitBoxAbsolute > div {
+    height: 300px;
+    width: 100%;
+  }
+}

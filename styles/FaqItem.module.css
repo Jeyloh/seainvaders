@@ -1,0 +1,23 @@
+.Wrapper {
+  cursor: pointer;
+  transition: all 500ms ease-in;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Icon {
+  transition: transform 200ms ease-in;
+  transform-origin: 50% 50%;
+}
+
+.IconOpen {
+  transform: rotate(180deg);
+}
+
+.FaqAnswer {
+  white-space: pre-line;
+}

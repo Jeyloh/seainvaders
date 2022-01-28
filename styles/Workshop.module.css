@@ -1,0 +1,128 @@
+.Workshop {
+}
+
+.Wrapper {
+  max-width: var(--max-page-width);
+  padding: var(--containerPadding);
+  margin: 0 auto;
+}
+
+.HeadingSection {
+  color: var(--dark);
+}
+
+.Subtitle {
+  font-size: var(--font-md);
+  border-left: 5px solid var(--gray);
+  line-height: var(--font-lg);
+  padding-left: 16px;
+}
+
+.IntroList li {
+  font-size: var(--font-md);
+  line-height: 40px;
+}
+.IntroList li:before {
+  font-size: var(--font-sm);
+  height: 5px;
+  width: 5px;
+  margin-right: 10px;
+  content: 'X';
+  font-family: var(--font-header);
+  color: var(--lightBlue);
+}
+
+.VideoContainer {
+  margin-top: var(--spacing3);
+}
+
+.WorkshopGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    'heading heading'
+    'first second';
+  gap: var(--spacing2);
+}
+
+@media only screen and (max-width: 680px) {
+  .WorkshopGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-areas:
+      'heading'
+      'second'
+      'first';
+  }
+}
+
+.WorkshopGridTitle {
+  grid-area: heading;
+  background: var(--lightBlue);
+  padding: var(--smallPadding);
+  color: white;
+}
+
+.WorkshopGridFirst {
+  grid-area: first;
+}
+
+.WorkshopGridSecond {
+  grid-area: second;
+}
+
+.WorkshopGridBox {
+  background: var(--dark);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.WorkshopGridHeader {
+  background: var(--lightBlue);
+  padding: var(--smallPadding);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.WorkshopGridContent {
+  padding: var(--smallPadding);
+  white-space: pre-line;
+}
+
+.CtaBox {
+  background: var(--lightBlue);
+  color: white;
+  padding: var(--smallPadding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.WorkshopCTAContainerFirst {
+  grid-area: cta1;
+}
+
+.WorkshopCTAContainerSecond {
+  grid-area: cta2;
+}
+
+.CtaButton {
+  padding: var(--buttonPadding);
+  background: white;
+  color: var(--dark);
+  border: none;
+}
+
+.FaqContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactUsForm {
+  /* width: 100vw;
+  margin-left: calc((100% - 100vw) / 2); */
+}

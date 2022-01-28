@@ -1,0 +1,294 @@
+{
+  "home": {
+    "philosophy": {
+      "title": "Philosophy",
+      "content": "We want to turn empty spaces in public room into active spaces. By the effort of street art, the space can be turned into lively, creative spaces that bring people together."
+    },
+    "contact": {
+      "title": "Contact",
+      "mail": "Mail: contact@coolart.no",
+      "phone": "Phone: 458 35 829 / 400 09 093"
+    },
+    "body": {
+      "title": "This is what we do",
+      "paragraphs": [
+        "We create beautiful mural art in public. We deliver colourful visuel art to the people.We turn empty spaces in public room into lively, creative spaces that bring people together.",
+        "Painted Streets = Colourful World = Happier Life",
+        "Art in the street makes people happy; it makes their day and their commute more interesting. It adds character to what would otherwise just be grey and boring. Art reminds people to feel alive. It wakes people up. It inspires. Motivates. And sometimes it can make people think.",
+        "Get on a flight to K-town and spend a day exploring the streets art. You’ll jump up and down in excitement every time you spot a public art piece!",
+        "Street art takes the ‘normal’ and makes it a thousand times more interesting.It’s also a great way to explore both the tourist parts and the less familiar parts of cities because street artists generally put their work in both famous tourist locations AND secret hidden alleyways and streets. Win win!Once you start noticing an artists work popping up in more than one city or country… that’s when the fun begins!"
+      ]
+    },
+    "reasons": {
+      "title": "5 reasons why Street Art is important!",
+      "paragraphs": [
+        "Why does street art matter? Street art makes cities work!",
+        "It benefits our health, happiness and well-being",
+        "Has the ability to drive economic growth",
+        "Can transform wasted space",
+        "Street art will give a city character!"
+      ]
+    },
+    "moreText": {
+      "title": "",
+      "paragraphs": [
+        "So PSSST... Lets go!",
+        "Let us put on a dash of colour, because public art installation can make a huge difference in your city.",
+        "Lets open up your mind and enjoy the street art in the southern Norway!We do care about recycling, climate and humanity.",
+        "CoolArt installations are good exampel of how street art can make your city unique."
+      ]
+    },
+    "yos": [
+      "Let's have\nsome fun",
+      "Cool Art\n+\nLove Crush\n=\nTrue",
+      "We make your city Cooler & Unique",
+      "DREAM BIG\nMAKE ART.",
+      "Let's put some color in public\nand be more happy, chill and creative"
+    ],
+    "partners": [
+      {
+        "title": "Kristiansand Gatekunstlaug",
+        "href": "../images/collaborators/krskommune.png"
+      },
+      {
+        "title": "Corona Fargerike",
+        "href": "../images/collaborators/fargerike.png"
+      },
+      {
+        "title": "Hunsfoss festivalen",
+        "href": "../images/collaborators/krskommune.png"
+      },
+      {
+        "title": "Trollvegg",
+        "href": "../images/collaborators/trollvegg.png"
+      },
+      {
+        "title": "Gumpens Auto",
+        "href": "../images/collaborators/gumpensauto.png"
+      }
+    ]
+  },
+  "header": {
+    "nav": [
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Gallery",
+        "href": "/gallery"
+      },
+      {
+        "text": "Workshops",
+        "href": "/workshops"
+      },
+      {
+        "text": "Contact",
+        "href": "/contact"
+      }
+    ]
+  },
+  "footer": {
+    "main": "It all started with the big colourful park in K-Town called Nybyen. \n People became happier in this park and this is just the begining ;)\n Our mission is to make southern Norway cooler.\n Public art occupies a unique position within the art world.\n Public art is a public good.\n It’s free. \n There are no tickets. \n You can view it alone or in groups. \n It’s open to everyone.\n Public art can provide a new way to experience the city.\n Public art lifts up humanity and challenges\n the individual to think differently about the world. \n Public art quickly became a hit with tourists, \n today public art is a curious phenomenon.\n So lets get more street art in town!",
+    "title": "About CoolArt",
+    "links": {
+      "title": "Links & Collaborators",
+      "list": [
+        {
+          "text": "NuArt",
+          "href": "http://www.nuartfestival.no"
+        },
+        {
+          "text": "iSupportStreetArt",
+          "href": "http://www.isupportstreetart.com"
+        },
+        {
+          "text": "Montana Cans",
+          "href": "https://www.montana-cans.com/"
+        },
+        {
+          "text": "Molotow",
+          "href": "http://www.molotow.com/"
+        },
+        {
+          "text": "Seainvaders.com",
+          "href": "https://seainvaders.com"
+        }
+      ]
+    }
+  },
+  "gallery": {
+    "title": "The Gallery",
+    "body": "CoolArt Production & Gallery.\nThink outside the \"white box.\"\nCoolArt love to surprise.\nYou expect to see art in a gallery\n- but this is something completely different.\nWe do one-night-exhibition only.\nOn non-traditional spaces,\nwhere the space is rarely used.\nWhen we found a new unique\nart-friendly space,\nCoolArt let You know!\nSo hi,\nKeep an eye on this!\nLets POP- UP!\nIf you have seen something you like it’s possible to arrange pick up a day at your convenience.",
+    "canvas": {
+      "title": "Canvas Paintings"
+    },
+    "workPortfolio": {
+      "title": "Work porfolio",
+      "body": "It all started with the big colourful park in K-Town called Nybyen.\nPeople became happier in this park and that was just the beginning ;)"
+    },
+    "instagram": {
+      "title": "We're on Instagram!",
+      "subtitle": "Join us! Everything you post with #krsgatekunst will appear here"
+    }
+  },
+  "workshop": {
+    "title": "WORKSHOPS",
+    "subtitle": "Learn Graffiti in Kristiansand",
+    "bodyList": [
+      "LEARN GRAFFITI AND STREET ART IN OUR CITY CENTRE WAREHOUSE STUDIO",
+      "WE OFFER TWO DIFFERENT COURSES. SCROLL DOWN TO CHECK THEM OUT",
+      "PERFECT FOR STUDENTS, PRIVATE PARTIES OR COMPANIES",
+      "A NATURAL TEAM BONDING ENVIRONMENT"
+    ],
+    "youtubeUrl": "https://www.youtube.com/embed/sDP52XI95K8?mute=1",
+    "types": {
+      "title": "WE HOST GROUPS OF 5 TO 50 PEOPLE",
+      "general": {
+        "title": "DRAW, GRAFITTI, STENCIL",
+        "sections": [
+          {
+            "title": "Draw",
+            "body": "This option includes a drawing workshop. Our GRAFFITI experts will help your group pre-plan their designs, develop their skills and ultimately create more impressive work!"
+          },
+          {
+            "title": "Graffiti",
+            "body": "Our GRAFFITI experts will teach you and your group all the basic spray paint skills you need to create amazing artwork on our studio walls."
+          },
+          {
+            "title": "Stencil",
+            "body": "This format goes into more details and includes a stencilling workshop where your group will learn how to create and spray paint your own stencil along with learning all the basic spray paint skills. Each person will get to take home a finished stencil"
+          }
+        ],
+        "price": "1000 kr / person",
+        "duration": "Duration: 2,5 hours",
+        "contact": "Contact"
+      },
+      "battle": {
+        "title": "GRAFFITI BATTLE",
+        "subtitle": "The ultimate workshop!",
+        "content": [
+          "Your group is split into teams and a theme/topic is chosen by your captain.",
+          "You must then create the best piece of work possible (under guidance of our graffiti experts) before the battle timer hits zero!",
+          "When the time is up you must put down your spray paint and the judges will choose a winner.",
+          "The best team is crowned champions!"
+        ],
+        "price": "800 kr / person",
+        "duration": "Duration: 2 hours",
+        "contact": "Contact"
+      }
+    },
+    "faq": {
+      "title": "Graffiti Workshops FAQ",
+
+      "qa": [
+        {
+          "q": "What should we bring?",
+          "a": "We provide everything you need, just turn up! We do advise against wearing your favourite top or sparkling white Nike's. Things never get very messy, but mistakes do sometimes happen!"
+        },
+        {
+          "q": "Where are you located?",
+          "a": "Our address is Lagmannsholmen 7, 4610 Kristiansand, Norway. It is located with a view to Kilden, and the ocean!"
+        },
+        {
+          "q": "Can we bring drinks?",
+          "a": "You're welcome to bring you own drinks for the event. We love to make things easier for you, and drinks can be stored at our locale before the workshop.\n"
+        },
+        {
+          "q": "How about food?",
+          "a": "We thought you'd never ask! If your group requires food, let us know. Our locale is right by Fiskebrygga and all the restaurants there. \n\nEither make arrangements yourself, or pre-order through us and we'll organise everything for your group. Easy! \n"
+        },
+        {
+          "q": "What if our group is smaller than 50?",
+          "a": "Pricing varies depending on the group size. Our minimum group size is 5 people and we have no real maximum. \n\nEstimates include 800kr per person for 'Draw, Graffiti, Stencil', and 1000kr per person for 'Graffiti Battle'. Get in touch for exact pricing for your group."
+        },
+        {
+          "q": "Can we create a custom workshop?",
+          "a": "Absolutely! We customise workshops for groups that want something a bit different. This can be anything from having a large canvas that everyone works together on, then brings back to the office to hang, to creating custom T-shirts. If you have something in mind, we're always happy to accommodate if possible.?"
+        }
+      ]
+    },
+    "workshopForm": {
+      "title": "Are you interested in a workshop?",
+      "receivedMessage": "We have received your email and will be in contact with you!",
+      "requiredFields": "* Required information",
+      "inputs": [
+        {
+          "id": "name",
+          "label": "Full name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "label": "Phone number",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "email",
+          "label": "Email address",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "company",
+          "label": "Company/Organizaation",
+          "type": "text"
+        },
+        {
+          "id": "date",
+          "label": "Preferred date",
+          "type": "date",
+          "placeholder": "dd/mm/yyyy",
+          "required": true
+        },
+        {
+          "id": "participantsAmount",
+          "label": "Amount of participants",
+          "type": "number",
+          "placeholder": "Minimum 5 participants",
+          "required": true
+        },
+        {
+          "id": "workshopType",
+          "label": "Workshop type",
+          "type": "select",
+          "required": true,
+          "options": [
+            {
+              "value": "Draw Grafitti Stencil",
+              "label": "Draw, Grafitti, Stencil"
+            },
+            {
+              "value": "Grafitti Battle",
+              "label": "Grafitti Battle"
+            },
+            {
+              "value": "Custom Workshop",
+              "label": "Custom Workshop"
+            }
+          ]
+        },
+        {
+          "id": "referral",
+          "label": "How did you hear about us?",
+          "type": "text"
+        },
+        {
+          "id": "extraMessage",
+          "label": "Extra information/questions",
+          "type": "textarea"
+        }
+      ],
+      "submitText": "Send workshop request"
+    }
+  },
+  "contact": {
+    "title": "Have a question?",
+    "line1": "DIRECT MAIL: CONTACT@COOLART.NO",
+    "line2": "MOBILE: 458 35 829 / 4004 9093",
+    "line3": "ADDRESS: FERGEFJELLET 1, ",
+    "line4": "4614 KRISTIANSAND"
+  }
+}
