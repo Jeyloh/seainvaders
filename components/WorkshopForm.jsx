@@ -140,44 +140,46 @@ export default function WorkshopForm({ inputs, submitText }) {
       }
     }
   };
-  if (isDone) {
-    return (
-      <div className={styles.DoneBox} style={{ fontSize: 18 }}>
-        {content.workshop.workshopForm.receivedMessage}
-        <BiMailSend />
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className={styles.Container}>
+        {inputs.map((input) => {
+          return (
+            <label
+              className={cn(styles.LabelContainer, {
+                [styles.Warning]: warningList.includes(input.id),
+              })}
+              key={input.id}
+              htmlFor={input.id}
+            >
+              <span>
+                {input.label} {input.required && ' *'}
+              </span>
+              {renderInputByType(input)}
+            </label>
+          );
+        })}
       </div>
-    );
-  } else
-    return (
-      <form onSubmit={handleSubmit}>
-        <div className={styles.Container}>
-          {inputs.map((input) => {
-            return (
-              <label
-                className={cn(styles.LabelContainer, {
-                  [styles.Warning]: warningList.includes(input.id),
-                })}
-                key={input.id}
-                htmlFor={input.id}
-              >
-                <span>
-                  {input.label} {input.required && ' *'}
-                </span>
-                {renderInputByType(input)}
-              </label>
-            );
-          })}
+      {isDone ? (
+        <div className={styles.DoneBox} style={{ fontSize: 18 }}>
+          {content.workshop.workshopForm.receivedMessage}
+          <BiMailSend />
         </div>
-        <p>{content.workshop.workshopForm.requiredFields}</p>
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          size='normal'
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-          onChange={validateCaptcha}
-        />
-        <button className={styles.SubmitButton} type='submit'>
-          {isLoading ? <BiMailSend /> : submitText}
-        </button>
-      </form>
-    );
+      ) : (
+        <>
+          <p>{content.workshop.workshopForm.requiredFields}</p>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size='normal'
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            onChange={validateCaptcha}
+          />
+          <button className={styles.SubmitButton} type='submit'>
+            {isLoading ? <BiMailSend /> : submitText}
+          </button>
+        </>
+      )}
+    </form>
+  );
 }
