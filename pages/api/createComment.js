@@ -49,7 +49,7 @@ async function warnDevAboutComment(name, email, comment) {
   const to = ['dev@coolart.no', 'jorgenlybeck94@gmail.com'];
   console.log('Advarer utvikler om endring');
   const mailOptions = {
-    from: 'Sea Invaders <contact@coolart.no>', // sender address
+    from: 'Sea Invaders <dev@coolart.no>', // sender address
     to, // list of receivers
     // subject: `Workshop request ${data.workshopType}`, // Subject line
     subject: 'Verifiser post på Sea Invaders', // Subject line
@@ -81,6 +81,7 @@ async function warnDevAboutComment(name, email, comment) {
     if (transporter.isIdle()) {
       transporter.sendMail(mailOptions, (err, info) => {
         if (err) {
+          console.log('Something failed');
           console.log(err);
           res.status(err.responseCode).send(err.response);
         } else {
