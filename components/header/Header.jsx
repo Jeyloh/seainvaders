@@ -66,6 +66,7 @@ const WebHeader = ({ currentHref }) => {
         <FlexContainer alignItems={'center'}>
           <HeaderIcon hasScrolled={hasScrolled}>
             <Image
+              objectPosition={'left center'}
               width={200}
               height={200}
               objectFit={'contain'}
@@ -102,6 +103,7 @@ const MobileHeader = ({ currentHref }) => {
         <FlexContainer alignItems={'center'}>
           <HeaderIcon hasScrolled={false} hasScrolledFurther={false}>
             <Image
+              objectPosition={'left center'}
               width={200}
               height={200}
               objectFit={'contain'}
