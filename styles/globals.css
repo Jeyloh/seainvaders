@@ -5,15 +5,16 @@
 
 :root {
   --lightBlue: rgb(16, 208, 233);
-  --blue: #2e86ab;
+  --blue: #41a7d2;
   --pink: #f96f9b;
+  --dark-pink: #af4173;
   --gradientBlue: linear-gradient(var(--lightBlue) 0, var(--blue) 100%);
   --gradientBlueReverse: linear-gradient(var(--blue) 0, var(--lightBlue) 100%);
 
   --gradientPink: linear-gradient(135deg, #743e57, #c41e69),
-    linear-gradient(180deg, #af4173, #af4173);
+    linear-gradient(180deg, var(--dark-pink), var(--dark-pink));
 
-  --gradientPinkBlue: linear-gradient(3deg, #2e86ab, #af4173 67%);
+  --gradientPinkBlue: linear-gradient(3deg, var(--blue), var(--dark-pink) 67%);
   --dark: #404047;
   --gray: #b4b4b4;
 
