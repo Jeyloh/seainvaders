@@ -46,7 +46,7 @@ aws.config.update({
 });
 
 async function warnDevAboutComment(name, email, comment) {
-  const to = ['dev@coolart.no'];
+  const to = ['dev@coolart.no', 'jorgenlybeck94@gmail.com'];
   console.log('Advarer utvikler om endring');
   const mailOptions = {
     from: 'Sea Invaders <contact@coolart.no>', // sender address
